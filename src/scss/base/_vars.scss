@@ -1,0 +1,32 @@
+//fonts
+$google-font: "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Mr+Dafoe&family=Source+Sans+Pro:wght@400;600&display=swap";
+$fontFamilySourceSansPro: "Source Sans Pro", sans-serif;
+$fontFamilyJosefinSans: "Josefin Sans", sans-serif;
+$fontFamilyMrDafoe: "Mr Dafoe", cursive;
+
+$baseFontSize: 16px;
+
+$mobilePadding: (12px / $baseFontSize) * 1rem;
+$desktopPadding: 1rem;
+
+// Paths
+
+$imgPath: "../i/";
+$fontsPath: "../fonts/";
+$usersFilesPath: "../userfiles/";
+
+// Colors
+$black: #000;
+$white: #fff;
+$buttonTurquoiseColor: #0de9df;
+$menuLinkColor: #939598;
+$activeMenuLinkColor: #16d5cc;
+$bigTitlesColor: #222;
+$bgFirstEventColor: #29282d;
+$bgSecondEventColor: #ffb434;
+$eventTextColor: #c1c1c1;
+$mainContentColor: #858585;
+$footerTextColor: #adadad;
+$experienceBgYears: #efefef;
+$tripadvBgColor: #fafafa;
+$footerTopBgColor: #0c0c0c;

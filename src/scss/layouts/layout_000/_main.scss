@@ -1,0 +1,776 @@
+//============= slider start=========================
+
+.slider-img {
+  &_first {
+    background: url(#{$imgPath}slider/slider.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 516px;
+  }
+  &_second {
+    background: url(#{$imgPath}slider/slider2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 516px;
+  }
+  &_third {
+    background: url(#{$imgPath}slider/slider3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 516px;
+  }
+}
+.slider-logo-holder {
+  position: relative;
+  top: 100px;
+  display: grid;
+  justify-items: center;
+}
+.slider-logo {
+  width: 248px;
+  position: absolute;
+  z-index: 100;
+}
+
+.container_dots {
+  position: relative;
+  top: -40px;
+}
+.dots-box {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.dots-box li {
+  margin-right: 10px;
+  border-radius: 100%;
+  font-size: 0;
+  border: 1px solid lightgray;
+}
+.dots-box button {
+  background: transparent;
+  display: flex;
+  border: 0;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+}
+
+.dots-box button:focus {
+  outline: none;
+}
+.slick-active {
+  background: $buttonTurquoiseColor;
+}
+//============= slider end=========================
+
+.fluid-container {
+  width: 100%;
+  &_service-box {
+    margin-top: -15px;
+  }
+  &_articles {
+    background: url(#{$imgPath}background-img-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &_abilities {
+    background: url(#{$imgPath}background-img-3.jpg) no-repeat;
+    background-size: cover;
+    // position: relative;
+    z-index: -10;
+  }
+  &_team {
+    padding-bottom: 30px;
+  }
+  &_testimonials {
+    background: $black;
+    display: block;
+    // position: relative;
+    z-index: -2;
+  }
+  &_surfcoaching {
+    background: url(#{$imgPath}background-img-5.jpg) no-repeat;
+    background-size: cover;
+  }
+  &_tripadvisor {
+    background: $tripadvBgColor;
+  }
+  &_footer-top {
+    background: $footerTopBgColor;
+  }
+  &_footer-bottom {
+    background: $black;
+  }
+  &_success {
+    background: url(#{$imgPath}palm.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include m(video) {
+    padding-top: 125px;
+  }
+  @include m(surftips) {
+    padding-top: 105px;
+    padding-bottom: 93px;
+  }
+  @include m(location) {
+    padding-top: 125px;
+    padding-bottom: 125px;
+    text-align: center;
+  }
+  @include m(testimonials) {
+    padding-top: 120px;
+    padding-bottom: 66px;
+  }
+  @include m(surfcoaching) {
+    padding-top: 124px;
+    text-align: center;
+  }
+  @include m(weather) {
+    padding-top: 80px;
+    padding-bottom: 101px;
+  }
+  @include m(tripadvisor) {
+    padding-top: 100px;
+    padding-bottom: 94px;
+  }
+  @include m(footer-top) {
+    padding-top: 87px;
+    padding-bottom: 76px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @include m(footer-bottom) {
+    padding: 25px 40px 40px 40px;
+  }
+  @include m(success) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+// ======= service-box =========
+.service-box {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    position: relative;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__content {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-family: $fontFamilyJosefinSans;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 2.24px;
+    padding-right: 50px;
+  }
+  &__title {
+    margin: 0;
+    font-size: rem(28px);
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  &__price {
+    margin: 0;
+    display: inline-block;
+    font-size: rem(22px);
+    font-weight: 700;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 13px;
+    background-color: $buttonTurquoiseColor;
+    margin-bottom: 15px;
+  }
+  &__timing {
+    margin: 0;
+    font-size: rem(14px);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+}
+
+// ======= fluid-container_articles =======
+
+.container_grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 314px) 1fr;
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  grid-template-areas:
+    ". cont1 ."
+    ". img1 .";
+}
+.article-pic {
+  grid-area: img1;
+  &_video {
+    background: url(#{$imgPath}articles/video-img.jpg) no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 206px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-area: cont1;
+  }
+
+  &__btn {
+    display: block;
+    width: 82px;
+    height: 82px;
+    border-radius: 100%;
+    background: $buttonTurquoiseColor;
+    border: none;
+    &:focus {
+      background: $buttonTurquoiseColor;
+    }
+  }
+  &_two {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    grid-row-gap: 30px;
+  }
+  &__img1 {
+    width: 100%;
+  }
+  &__second {
+    display: flex;
+    justify-content: center;
+  }
+  &__img2 {
+    width: 90%;
+  }
+}
+
+.article-content {
+  grid-area: cont1;
+  &_video {
+    margin-top: 80px;
+    grid-area: img1;
+  }
+  font-family: $fontFamilyJosefinSans;
+  @include e(title) {
+    margin: 0;
+    font-size: rem(30px);
+    color: $bigTitlesColor;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+  }
+  @include e(text) {
+    margin: 0;
+    font-size: rem(19px);
+    color: $mainContentColor;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 40px;
+    @include m(lessmarbot) {
+      margin-bottom: 15px;
+    }
+  }
+  @include e(btn) {
+    background: transparent;
+    color: $bigTitlesColor;
+    border: 2px solid $bigTitlesColor;
+    font-size: rem(12px);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 35px 12px 32px;
+    letter-spacing: 2px;
+    &:focus {
+      background: $black;
+      color: $white;
+      border: 2px solid $bigTitlesColor;
+      font-size: rem(12px);
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 15px 35px 12px 32px;
+      letter-spacing: 2px;
+    }
+    @include m(success) {
+      text-decoration: none;
+    }
+  }
+  @include e(author) {
+    margin: 0;
+    padding-left: 80px;
+    font-family: $fontFamilyMrDafoe;
+    font-size: 2.5rem;
+    position: relative;
+    @include before(57px, 57px, 5px, 0px) {
+      background: url(#{$imgPath}articles/owner.png) no-repeat;
+    }
+  }
+  @include e(pos) {
+    margin: 0;
+    padding-left: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: rem(13px);
+    font-weight: 600;
+    color: $activeMenuLinkColor;
+    margin-bottom: 55px;
+  }
+  &__description {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 400;
+    color: $mainContentColor;
+    line-height: 25px;
+    margin-bottom: rem(45px);
+  }
+  @include m(surfcoaching) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// ======= event-box=======
+
+.event-box {
+  @include e(image) {
+    width: 100%;
+  }
+  @include e(content) {
+    padding: 32px 50px 40px 50px;
+    color: $white;
+    @include m(first) {
+      background: $bgFirstEventColor;
+    }
+    @include m(second) {
+      background: $bgSecondEventColor;
+    }
+    @include m(third) {
+      background: $activeMenuLinkColor;
+    }
+  }
+  @include e(date) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(14px);
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  @include e(title) {
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(22px);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  @include e(text) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 38px;
+    @include m(first) {
+      color: $eventTextColor;
+    }
+  }
+  @include e(icon) {
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+    font-weight: bolder;
+  }
+  @include e(location) {
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(12px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+//======= fluid-container_abilities =======
+.abilities-row {
+  padding: 124px 15px 0;
+
+  text-align: center;
+}
+.abilities-box {
+  @include e(item) {
+    padding-top: 60px;
+  }
+  @include e(image) {
+    margin-bottom: 20px;
+  }
+  @include e(title) {
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(16px);
+    font-weight: 700;
+    color: $bigTitlesColor;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  @include e(text) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 400;
+    color: $mainContentColor;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.experience-row {
+  padding-top: 129px;
+  padding-bottom: 125px;
+  position: relative;
+  &__years {
+    font-family: $fontFamilyMrDafoe;
+    font-size: 272px;
+    color: $experienceBgYears;
+    position: absolute;
+    top: 45px;
+    left: -17px;
+    z-index: -1;
+  }
+}
+.experts {
+  &__img {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+.map-holder {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.map {
+  margin-bottom: 20px;
+  height: 400px;
+  width: 100%;
+}
+.button-box {
+  @include flexColumn;
+  &__item {
+    font-family: $fontFamilyJosefinSans;
+    margin-bottom: 10px;
+    background: transparent;
+    color: $bigTitlesColor;
+    border: 2px solid $bigTitlesColor;
+    font-size: rem(12px);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 35px 12px 32px;
+    letter-spacing: 2px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:focus {
+      font-family: $fontFamilyJosefinSans;
+      background: $black;
+      color: $white;
+      border: 2px solid $bigTitlesColor;
+      font-size: rem(12px);
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 15px 35px 12px 32px;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+// ====== gallery =======
+.fluid-container_gallery {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr repeat(4, 2fr);
+  grid-gap: 20px;
+}
+.gallery-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+// ====== team ==========
+
+.team-member {
+  position: relative;
+  margin-bottom: 30px;
+  &__img {
+    width: 100%;
+  }
+  &__info {
+    font-family: $fontFamilyJosefinSans;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $white;
+    text-transform: uppercase;
+    padding: 33px 34px 36px 34px;
+    background: $activeMenuLinkColor;
+    width: 257px;
+    text-align: right;
+    position: absolute;
+    top: 127px;
+    right: 0;
+    z-index: 99999;
+  }
+  &__name {
+    margin: 0;
+    font-size: rem(22px);
+    margin-bottom: 13px;
+  }
+  &__vertical {
+    display: block;
+    width: 149px;
+    background: $activeMenuLinkColor;
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(12px);
+    letter-spacing: 1px;
+    color: $white;
+    text-transform: uppercase;
+    position: absolute;
+    transform: rotateZ(-90deg);
+    padding: 12px 20px;
+    top: 182px;
+    right: -56px;
+    &_fourth {
+      padding: 12px 12px;
+    }
+  }
+  &__pos {
+    margin: 0;
+    font-size: rem(12px);
+    margin-bottom: 10px;
+  }
+  &__social {
+    @include flexRow;
+    justify-content: flex-end;
+  }
+  &__icon {
+    width: 13px;
+    height: 15px;
+    margin-left: 12px;
+  }
+}
+.team-member__vertical.hidden {
+  display: none;
+}
+.team-member__info.invisible {
+  display: none;
+}
+
+// ====== testimonials ========
+.testimonials-title {
+  margin: 0;
+  font-family: $fontFamilyJosefinSans;
+  font-size: rem(30px);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.testimonials {
+  font-family: $fontFamilyJosefinSans;
+  height: 180px;
+  &__words {
+    margin: 0;
+    font-size: rem(22px);
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 25px;
+  }
+  &__client {
+    margin: 0;
+    font-size: rem(14px);
+    font-weight: 600;
+    color: $activeMenuLinkColor;
+    margin-bottom: 10px;
+  }
+}
+
+#testimonials-slider {
+  padding-right: 32px;
+}
+.testimonials-arrow {
+  position: absolute;
+  right: 1px;
+  width: 25px;
+  height: 25px;
+  z-index: 1000;
+  top: 95px;
+  cursor: pointer;
+  background: url(#{$imgPath}icons/arrow-down.svg) no-repeat;
+
+  text-indent: -9999px;
+  &_prev {
+    top: 40px;
+    right: 3px;
+    transform: rotate(180deg);
+  }
+}
+
+// ======= surfcoaching ========
+.surfcoaching-box {
+  padding-top: 60px;
+  padding-left: 43px;
+  padding-right: 43px;
+
+  @include e(image) {
+    margin-bottom: 30px;
+  }
+  @include e(title) {
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(16px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $bigTitlesColor;
+    margin-bottom: 13px;
+  }
+  @include e(text) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 400;
+    color: $mainContentColor;
+    line-height: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+// ====== weather-forecast =======
+.weather-table {
+  margin-bottom: 20px;
+  &__dashed-row {
+    border-bottom: 1px dashed $mainContentColor;
+  }
+  &__col1 {
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(11px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    letter-spacing: 1px;
+  }
+  &__col2 {
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(11px);
+    font-weight: 400;
+    color: $bgSecondEventColor;
+  }
+
+  &__col4 {
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(13px);
+    font-weight: 400;
+    color: $mainContentColor;
+  }
+  &__icon {
+    width: 25px;
+    height: 26px;
+    padding: 2px;
+  }
+}
+
+.weather-site {
+  margin: 0;
+  font-family: $fontFamilySourceSansPro;
+  font-size: rem(17px);
+  font-weight: 600;
+  color: $buttonTurquoiseColor;
+  margin-bottom: 50px;
+  @include e(link) {
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 600;
+    color: $buttonTurquoiseColor;
+    text-decoration: none;
+  }
+}
+
+.weather-images {
+  @include e(item) {
+    width: 100%;
+
+    @include m(first) {
+      background: url(#{$imgPath}weatherforecast/img-1.jpg) no-repeat;
+      background-size: cover;
+    }
+    @include m(fourth) {
+      background: url(#{$imgPath}weatherforecast/img-4.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+  @include e(content) {
+    padding: 55px 35px 50px 20px;
+  }
+  @include e(title) {
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(22px);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    @include before(80px, 78px, -12px, 162px) {
+      background: url(#{$imgPath}weatherforecast/sunny.png) no-repeat;
+      background-size: cover;
+    }
+  }
+  @include e(date) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 400;
+    color: $white;
+    margin-bottom: 5px;
+  }
+}
+
+// ========= tripadvisor =======
+.tripadvisor-img {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.tripadvisor-text {
+  margin: 0;
+  font-family: $fontFamilyJosefinSans;
+  font-size: rem(22px);
+  font-weight: 700;
+  line-height: 33px;
+  color: $bigTitlesColor;
+  margin-bottom: 25px;
+}
+
+// ========= instagram slider ========
+.instagram-row-image {
+  width: 100%;
+  max-width: 100%;
+}

@@ -1,0 +1,43 @@
+.container_grid {
+  grid-template-columns: 1fr repeat(2, minmax(auto, 635px)) 1fr;
+  grid-template-areas: ". cont img .";
+  align-items: center;
+}
+.article-content {
+  grid-area: cont;
+  &_video {
+    grid-area: img;
+  }
+}
+.article-pic {
+  &_video {
+    grid-area: cont;
+    width: 535px;
+    height: 368px;
+  }
+  &_two {
+    grid-area: img;
+  }
+  &__img1 {
+    width: 336px;
+  }
+
+  &__img2 {
+    width: 252px;
+    height: 350px;
+  }
+}
+// ======= service-box =========
+.service-box {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+// ======= event-box=======
+.event-box {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "cont1 img1 img2 cont2"
+    "cont3 img3 img4 cont4";
+}

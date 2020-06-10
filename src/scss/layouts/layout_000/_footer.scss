@@ -1,0 +1,182 @@
+// ============================= footer ===================================
+
+// ============ footer-top ===========
+.footer-box {
+  @include flexColumn;
+  margin-top: 26px;
+  @include e(title) {
+    margin: 0;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(22px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $white;
+    margin-bottom: 20px;
+  }
+  @include e(text) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(17px);
+    font-weight: 400;
+    color: $footerTextColor;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
+  @include e(icon) {
+    color: $white;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+}
+.footer-socialbox {
+  @include flexRow;
+  color: $white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include e(icon) {
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+  }
+}
+
+// ==== instagram-gallery =====
+.instagram-gallery {
+  @include flexRow;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 34px;
+  @include e(item) {
+    width: 49%;
+    margin-bottom: 4px;
+  }
+  @include e(link) {
+    @include flexRow;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  @include e(iconholder) {
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    background: $buttonTurquoiseColor;
+    @include flexRow;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+  }
+  @include e(icon) {
+    color: $white;
+    width: 8px;
+    height: 8px;
+  }
+  @include e(image) {
+    width: 100%;
+  }
+}
+
+// =======newsletter-form =======
+
+.form-holder {
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+
+.newsletter-form {
+  position: relative;
+  @include flexRow;
+  justify-content: space-between;
+  &__control {
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(14px);
+    font-weight: 400;
+    color: $white;
+    padding-bottom: 8px;
+    width: 220px;
+    &:focus {
+      font-family: $fontFamilyJosefinSans;
+      font-size: rem(14px);
+      font-weight: 400;
+      color: $white;
+    }
+  }
+  &__warning {
+    position: absolute;
+    top: 30px;
+    font-family: $fontFamilyJosefinSans;
+    font-size: rem(12px);
+    font-weight: 400;
+    color: $white;
+  }
+  &__btn {
+    width: 14px;
+    height: 14px;
+    background: url(#{$imgPath}icons/paper-plane.svg) no-repeat !important;
+  }
+}
+.form-group {
+  @include flexColumn;
+}
+
+//====scroll-top===
+.scroll-top {
+  position: fixed;
+  bottom: 85px;
+  right: -40px;
+  height: 35px;
+  width: 140px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+
+  &__text {
+    text-transform: uppercase;
+    font-family: $fontFamilySourceSansPro;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0de9df;
+  }
+}
+
+// ===== footer-bottom ======
+
+.rights-box {
+  @include flexRow;
+  @include e(logo) {
+    width: 66px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  @include e(text) {
+    padding-top: 5px;
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(13px);
+    font-weight: 400;
+    line-height: 21px;
+    color: $footerTextColor;
+  }
+}
+
+.info-box {
+  @include flexColumn;
+  color: $white;
+  @include e(item) {
+    margin: 0;
+    font-family: $fontFamilySourceSansPro;
+    font-size: rem(16px);
+    font-weight: 400;
+    margin-top: 20px;
+    color: $white;
+  }
+  @include e(icon) {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+}
