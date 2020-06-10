@@ -14,7 +14,7 @@
     width: 369px;
   }
   &__second {
-    display: flex;
+    @include flexRow;
     flex-direction: column;
     justify-content: center;
   }
@@ -30,7 +30,13 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+//======= fluid-container_abilities =======
 
+.experts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
 // ====== gallery =====
 .fluid-container_gallery {
   grid-template-columns: repeat(3, 1fr);
@@ -56,4 +62,17 @@
 .gallery-item_6 {
   grid-column: 2;
   grid-row: 3;
+}
+
+// ======= surfcoaching ========
+
+.container_grid-6 {
+  grid-template-columns: 1fr minmax(700px, 1fr) 1fr;
+}
+
+.surfcoaching-box,
+.abilities-box {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }

@@ -1,3 +1,4 @@
+// ====== 4 column grid container ======
 .container_grid {
   grid-template-columns: 1fr minmax(auto, 950px) 1fr;
 }
@@ -49,4 +50,15 @@
 .gallery-item_6 {
   grid-column: 4;
   grid-row: 2;
+}
+// ====== 6 column grid container ======
+.container_grid-6 {
+  grid-template-columns: 1fr minmax(950px, 1fr) 1fr;
+}
+
+.surfcoaching-box,
+.abilities-box {
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  justify-content: center;
 }

@@ -82,17 +82,13 @@
   &_abilities {
     background: url(#{$imgPath}background-img-3.jpg) no-repeat;
     background-size: cover;
-    // position: relative;
-    z-index: -10;
+    background-position: top;
   }
   &_team {
     padding-bottom: 30px;
   }
   &_testimonials {
     background: $black;
-    display: block;
-    // position: relative;
-    z-index: -2;
   }
   &_surfcoaching {
     background: url(#{$imgPath}background-img-5.jpg) no-repeat;
@@ -209,7 +205,6 @@
 }
 
 // ======= fluid-container_articles =======
-
 .container_grid {
   display: grid;
   grid-template-columns: 1fr minmax(auto, 314px) 1fr;
@@ -410,9 +405,9 @@
 //======= fluid-container_abilities =======
 .abilities-row {
   padding: 124px 15px 0;
-
   text-align: center;
 }
+
 .abilities-box {
   @include e(item) {
     padding-top: 60px;
@@ -456,6 +451,7 @@
   }
 }
 .experts {
+  grid-area: img1;
   &__img {
     width: 100%;
     margin-top: 30px;
@@ -581,9 +577,13 @@
 .team-member__info.invisible {
   display: none;
 }
-
+// ==== locations====
+.map-holder {
+  grid-area: img1;
+}
 // ====== testimonials ========
 .testimonials-title {
+  grid-area: cont1;
   margin: 0;
   font-family: $fontFamilyJosefinSans;
   font-size: rem(30px);
@@ -592,6 +592,9 @@
   color: $white;
   letter-spacing: 1px;
   margin-bottom: 30px;
+}
+.testimonials-box {
+  grid-area: img1;
 }
 .testimonials {
   font-family: $fontFamilyJosefinSans;
@@ -634,10 +637,24 @@
 }
 
 // ======= surfcoaching ========
-.surfcoaching-box {
+
+.container_grid-6 {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 300px) 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    ". title ."
+    ". text .";
+}
+
+.article-content_surfcoaching,
+.article-content_abilities-row {
+  grid-area: title;
+}
+.surfcoaching-box,
+.abilities-box {
+  grid-area: text;
   padding-top: 60px;
-  padding-left: 43px;
-  padding-right: 43px;
 
   @include e(image) {
     margin-bottom: 30px;
