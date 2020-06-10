@@ -23,12 +23,11 @@ function handleToggleMenu(e) {
 
 function resetMobileMenu() {
   mobileMenu.removeClass("visible");
+
   $(".mobile-nav .has-submenu").removeClass("opened").find("ul").hide();
 }
 
 function handleMenu(e) {
-  e.preventDefault();
-  $(this).children("svg").toggleClass("hidden");
   mobileMenu.toggleClass("visible");
 }
 

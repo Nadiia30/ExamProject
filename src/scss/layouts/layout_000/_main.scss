@@ -345,6 +345,8 @@
 .event-box {
   @include e(image) {
     width: 100%;
+    max-width: 100%;
+    min-height: 100%;
   }
   @include e(content) {
     padding: 32px 50px 40px 50px;

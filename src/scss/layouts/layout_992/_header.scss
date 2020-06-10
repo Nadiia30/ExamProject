@@ -1,0 +1,194 @@
+.ontop-mobile,
+.mobile-menu {
+  display: none;
+}
+
+.header-top {
+  padding: 15px 40px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  border-bottom: 1px solid $experienceBgYears;
+  @include e(social) {
+    display: flex;
+    align-items: baseline;
+  }
+  @include e(title) {
+    display: block;
+    margin: 0;
+    @include font($fontFamilyJosefinSans, 14px, 700);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $bigTitlesColor;
+  }
+  @include e(item) {
+    display: flex;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  @include e(icon) {
+    width: 15px;
+    height: 15px;
+    color: $bigTitlesColor;
+  }
+  @include e(contacts) {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include e(phone) {
+    @include font($fontFamilySourceSansPro, 14px, 400);
+    margin: 0;
+    color: $black;
+    margin-left: 5px;
+  }
+  @include e(mail) {
+    @include font($fontFamilySourceSansPro, 14px, 400);
+    margin: 0;
+    color: $black;
+    margin-left: 5px;
+  }
+  @include e(address) {
+    @include font($fontFamilySourceSansPro, 14px, 400);
+    margin: 0;
+    color: $black;
+    margin-left: 5px;
+  }
+}
+
+.header-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  &__icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    color: $bigTitlesColor;
+  }
+  &__btn {
+    display: none;
+  }
+}
+.menu {
+  display: block;
+  &__logo {
+    width: 110px;
+    height: 85px;
+    margin: 10px;
+  }
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+}
+/* 1st level. */
+.menu > ul > li {
+  display: inline-block;
+}
+
+.menu > ul > li > a {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  @include font($fontFamilyJosefinSans, 12px, 700);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $bigTitlesColor;
+  letter-spacing: 1px;
+}
+.menu > ul > li > a:hover {
+  color: $activeMenuLinkColor;
+}
+
+/* 2nd level. */
+.menu li ul {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  padding: 1.5rem 0;
+  background: $white;
+  transition: all 200ms ease;
+  z-index: 10000;
+}
+.menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+.menu li ul a {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  @include font($fontFamilySourceSansPro, 16px, 400);
+  color: $mainContentColor;
+}
+.menu li ul a:hover {
+  color: $activeMenuLinkColor;
+}
+/* 3rd level. */
+.menu li ul li ul {
+  top: -1.5rem;
+  left: 100%;
+  z-index: 9000;
+}
+/* Drop-down arrows. */
+.menu > ul > li.has-submenu:after,
+.menu li ul li.has-submenu:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+}
+
+/* 1st level arrows. */
+// .menu > ul > li.has-submenu:after {
+//   right: 5px;
+//   border-left: 5px solid transparent;
+//   border-right: 5px solid transparent;
+//   border-top: 5px solid rgba(0, 0, 0, 0.25);
+// }
+
+/* 2nd level arrows. */
+.menu li ul li.has-submenu:after {
+  right: 1.5rem;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid rgba(0, 0, 0, 0.25);
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+  &__search {
+    display: flex;
+    align-items: baseline;
+    padding: 1rem 1.5rem;
+    @include font($fontFamilyJosefinSans, 12px, 700);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $bigTitlesColor;
+    letter-spacing: 1px;
+  }
+  &__cart {
+    display: flex;
+    align-items: baseline;
+    padding: 1rem 1.5rem;
+    @include font($fontFamilyJosefinSans, 12px, 700);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $bigTitlesColor;
+    letter-spacing: 1px;
+  }
+  .circle-button {
+    display: none;
+  }
+}
