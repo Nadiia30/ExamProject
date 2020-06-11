@@ -330,6 +330,8 @@
     min-height: 100%;
   }
   @include e(content) {
+    @include flexColumn;
+    justify-content: center;
     padding: 32px 50px 40px 50px;
     color: $white;
     @include m(first) {
@@ -421,10 +423,14 @@
   }
 }
 .experts {
+  margin-top: 30px;
   grid-area: img1;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
   &__img {
     width: 100%;
-    margin-top: 30px;
+    max-width: 100%;
   }
 }
 .map-holder {
@@ -548,9 +554,11 @@
   grid-area: img1;
 }
 // ====== testimonials ========
+
 .testimonials-title {
   grid-area: cont1;
   margin: 0;
+  margin-left: 15px;
   @include font($fontFamilyJosefinSans, rem(30px), 600);
   text-transform: uppercase;
   color: $white;
@@ -559,6 +567,7 @@
 }
 .testimonials-box {
   grid-area: img1;
+  margin-left: 15px;
 }
 .testimonials {
   height: 180px;
@@ -566,6 +575,7 @@
     @include font($fontFamilyJosefinSans, rem(22px), 700);
     margin: 0;
     color: $white;
+    margin-top: 25px;
     margin-bottom: 25px;
   }
   &__client {

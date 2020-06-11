@@ -26,8 +26,13 @@
 .service-box {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
+  &__content {
+    top: 40px;
+  }
 }
-
+.experts {
+  margin-top: 0;
+}
 // ======= event-box=======
 .event-box {
   grid-template-columns: repeat(4, 1fr);
@@ -45,4 +50,8 @@
 .abilities-box {
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   justify-content: center;
+}
+// ====== team-container ======
+.fluid-container_team {
+  grid-template-columns: repeat(4, 1fr);
 }

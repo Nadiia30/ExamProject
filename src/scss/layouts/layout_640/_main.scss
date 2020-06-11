@@ -1,3 +1,10 @@
+// ======= service-box =========
+.service-box {
+  &__title {
+    font-size: rem(35px);
+  }
+}
+
 .container_grid {
   grid-template-columns: 1fr minmax(auto, 550px) 1fr;
 }
@@ -86,4 +93,17 @@
 .gallery-item_5,
 .gallery-item_6 {
   height: 100%;
+}
+
+.weather-table {
+  &__col1 {
+    font-size: rem(14px);
+  }
+  &__col2 {
+    font-size: rem(14px);
+  }
+
+  &__col4 {
+    font-size: rem(17px);
+  }
 }
