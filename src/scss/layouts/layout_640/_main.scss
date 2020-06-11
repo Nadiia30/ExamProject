@@ -1,9 +1,9 @@
 .container_grid {
-  grid-template-columns: 1fr minmax(auto, 600px) 1fr;
+  grid-template-columns: 1fr minmax(auto, 550px) 1fr;
 }
 .article-pic {
   &_video {
-    width: 600px;
+    width: 550px;
     height: 413px;
   }
 }

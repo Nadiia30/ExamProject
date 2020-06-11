@@ -1,10 +1,10 @@
 // ====== 4 column grid container ======
 .container_grid {
-  grid-template-columns: 1fr minmax(auto, 950px) 1fr;
+  grid-template-columns: 1fr minmax(auto, 768px) 1fr;
 }
 .article-pic {
   &_video {
-    width: 950px;
+    width: 768px;
     height: 654px;
   }
   &_two {
@@ -12,7 +12,7 @@
     grid-column-gap: 30px;
   }
   &__img1 {
-    width: 450px;
+    width: 370px;
   }
   &__second {
     display: flex;
@@ -20,8 +20,8 @@
     justify-content: center;
   }
   &__img2 {
-    width: 460px;
-    height: 639px;
+    width: 283px;
+    height: 395px;
   }
 }
 // ====== gallery ======

@@ -1,0 +1,129 @@
+// ====== slider =======
+.slider-logo {
+  width: 308px;
+}
+
+// ======= service-box =========
+.service-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+// ======= fluid-container articles ======
+.container_grid {
+  grid-template-columns: 1fr minmax(auto, 740px) 1fr;
+}
+.article-pic {
+  &_video {
+    width: 740px;
+    height: 520px;
+  }
+  &_two {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  &__img1 {
+    width: 369px;
+  }
+  &__second {
+    @include flexColumn;
+    justify-content: center;
+  }
+  &__img2 {
+    width: 283px;
+    height: 394px;
+  }
+}
+
+//======= fluid-container_abilities =======
+
+.experts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+// ====== gallery =====
+.fluid-container_gallery {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.gallery-item_2 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+.gallery-item_3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.gallery-item_4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.gallery-item_5 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.gallery-item_6 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+// ====== team-container ======
+
+.fluid-container_team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.team-member {
+  margin-bottom: 0px;
+}
+
+// ======= surfcoaching ========
+
+.container_grid-6 {
+  grid-template-columns: 1fr minmax(700px, 1fr) 1fr;
+}
+
+.surfcoaching-box,
+.abilities-box {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+// ====== weather-forecast =======
+.weather-images {
+  grid-template-columns: repeat(2, fr);
+  grid-template-rows: repeat(3, 1fr);
+  @include e(item) {
+    @include m(first) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    @include m(second) {
+      grid-column: 1;
+      grid-row: 2 / span 2;
+    }
+    @include m(third) {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+    }
+    @include m(fourth) {
+      grid-column: 2;
+      grid-row: 3;
+    }
+  }
+}
+// ========= tripadvisor =======
+.container_tripadvisor {
+  display: grid;
+  grid-template-columns: 1fr 200px minmax(auto, 635px) 1fr;
+}
+.tripadvisor-img {
+  grid-column: 2;
+}
+.tripadvisor-text {
+  grid-column: 3;
+}

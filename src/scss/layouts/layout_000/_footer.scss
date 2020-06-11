@@ -6,9 +6,7 @@
   margin-top: 26px;
   @include e(title) {
     margin: 0;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(22px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(22px), 700);
     text-transform: uppercase;
     letter-spacing: 1px;
     color: $white;
@@ -16,9 +14,7 @@
   }
   @include e(text) {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
     color: $footerTextColor;
     line-height: 25px;
     margin-bottom: 15px;
@@ -44,16 +40,17 @@
 
 // ==== instagram-gallery =====
 .instagram-gallery {
-  @include flexRow;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+
   @include e(item) {
-    width: 49%;
-    margin-bottom: 4px;
+    width: 100%;
   }
   @include e(link) {
     @include flexRow;
@@ -93,25 +90,19 @@
   @include flexRow;
   justify-content: space-between;
   &__control {
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(14px);
-    font-weight: 400;
+    @include font($fontFamilyJosefinSans, rem(14px), 400);
     color: $white;
     padding-bottom: 8px;
     width: 220px;
     &:focus {
-      font-family: $fontFamilyJosefinSans;
-      font-size: rem(14px);
-      font-weight: 400;
+      @include font($fontFamilyJosefinSans, rem(14px), 400);
       color: $white;
     }
   }
   &__warning {
     position: absolute;
     top: 30px;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(12px);
-    font-weight: 400;
+    @include font($fontFamilyJosefinSans, rem(12px), 400);
     color: $white;
   }
   &__btn {
@@ -122,25 +113,6 @@
 }
 .form-group {
   @include flexColumn;
-}
-
-//====scroll-top===
-.scroll-top {
-  position: fixed;
-  bottom: 85px;
-  right: -40px;
-  height: 35px;
-  width: 140px;
-  transform: rotate(-90deg);
-  cursor: pointer;
-
-  &__text {
-    text-transform: uppercase;
-    font-family: $fontFamilySourceSansPro;
-    font-size: 15px;
-    font-weight: 600;
-    color: #0de9df;
-  }
 }
 
 // ===== footer-bottom ======
@@ -155,9 +127,7 @@
   @include e(text) {
     padding-top: 5px;
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(13px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(13px), 400);
     line-height: 21px;
     color: $footerTextColor;
   }
@@ -167,10 +137,9 @@
   @include flexColumn;
   color: $white;
   @include e(item) {
+    display: inline-block;
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(16px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(16px), 400);
     margin-top: 20px;
     color: $white;
   }
@@ -178,5 +147,21 @@
     width: 14px;
     height: 14px;
     margin-right: 10px;
+  }
+}
+//====scroll-top===
+.scroll-top {
+  position: fixed;
+  bottom: 85px;
+  right: -40px;
+  height: 35px;
+  width: 140px;
+  transform: rotate(-90deg);
+  cursor: pointer;
+
+  &__text {
+    text-transform: uppercase;
+    @include font($fontFamilySourceSansPro, rem(15px), 600);
+    color: #0de9df;
   }
 }

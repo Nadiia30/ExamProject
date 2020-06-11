@@ -30,6 +30,10 @@
     width: 15px;
     height: 15px;
     color: $bigTitlesColor;
+    &:hover {
+      color: $activeMenuLinkColor;
+      transform: scale(1.2);
+    }
   }
   @include e(contacts) {
     display: flex;
@@ -64,6 +68,10 @@
     width: 20px;
     height: 20px;
     color: $bigTitlesColor;
+    &:hover {
+      color: $activeMenuLinkColor;
+      transform: scale(1.2);
+    }
   }
   &__btn {
     display: none;
@@ -71,10 +79,14 @@
 }
 .menu {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   &__logo {
     width: 110px;
     height: 85px;
     margin: 10px;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
@@ -94,7 +106,7 @@
 
 .menu > ul > li > a {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   @include font($fontFamilyJosefinSans, 12px, 700);
   text-transform: uppercase;
   text-decoration: none;
@@ -110,12 +122,12 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  top: 100%;
+  top: 160%;
   left: 0;
-  width: 220px;
+  width: 200px;
   padding: 1.5rem 0;
   background: $white;
-  transition: all 200ms ease;
+  transition: all 400ms ease;
   z-index: 10000;
 }
 .menu li:hover > ul {
@@ -167,26 +179,32 @@
 
 .right-side {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   &__search {
     display: flex;
     align-items: baseline;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     @include font($fontFamilyJosefinSans, 12px, 700);
     text-transform: uppercase;
     text-decoration: none;
     color: $bigTitlesColor;
     letter-spacing: 1px;
+    &:hover {
+      color: $activeMenuLinkColor;
+    }
   }
   &__cart {
     display: flex;
     align-items: baseline;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     @include font($fontFamilyJosefinSans, 12px, 700);
     text-transform: uppercase;
     text-decoration: none;
     color: $bigTitlesColor;
     letter-spacing: 1px;
+    &:hover {
+      color: $activeMenuLinkColor;
+    }
   }
   .circle-button {
     display: none;

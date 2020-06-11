@@ -40,7 +40,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  @include flexRow;
   justify-content: center;
 }
 .dots-box li {
@@ -51,7 +51,7 @@
 }
 .dots-box button {
   background: transparent;
-  display: flex;
+  @include flexRow;
   border: 0;
   border-radius: 100%;
   justify-content: center;
@@ -67,7 +67,7 @@
 .slick-active {
   background: $buttonTurquoiseColor;
 }
-//============= slider end=========================
+//============= fluid-containers =========================
 
 .fluid-container {
   width: 100%;
@@ -143,10 +143,7 @@
     padding-bottom: 94px;
   }
   @include m(footer-top) {
-    padding-top: 87px;
-    padding-bottom: 76px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 87px 35px 76px 35px;
   }
   @include m(footer-bottom) {
     padding: 25px 40px 40px 40px;
@@ -159,8 +156,7 @@
 
 // ======= service-box =========
 .service-box {
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
 
   &__item {
     position: relative;
@@ -172,7 +168,6 @@
     position: absolute;
     top: 50px;
     left: 50px;
-    font-family: $fontFamilyJosefinSans;
     color: $white;
     text-transform: uppercase;
     letter-spacing: 2.24px;
@@ -180,26 +175,20 @@
   }
   &__title {
     margin: 0;
-    font-size: rem(28px);
-    font-weight: 600;
+    @include font($fontFamilyJosefinSans, rem(28px), 600);
     margin-bottom: 15px;
   }
   &__price {
     margin: 0;
     display: inline-block;
-    font-size: rem(22px);
-    font-weight: 700;
-    padding-bottom: 5px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 13px;
+    @include font($fontFamilyJosefinSans, rem(22px), 700);
+    padding: 10px 13px 5px 10px;
     background-color: $buttonTurquoiseColor;
     margin-bottom: 15px;
   }
   &__timing {
     margin: 0;
-    font-size: rem(14px);
-    font-weight: 600;
+    @include font($fontFamilyJosefinSans, rem(14px), 600);
     letter-spacing: 1.5px;
   }
 }
@@ -248,7 +237,7 @@
     width: 100%;
   }
   &__second {
-    display: flex;
+    @include flexRow;
     justify-content: center;
   }
   &__img2 {
@@ -262,21 +251,19 @@
     margin-top: 80px;
     grid-area: img1;
   }
-  font-family: $fontFamilyJosefinSans;
+
   @include e(title) {
     margin: 0;
-    font-size: rem(30px);
+    @include font($fontFamilyJosefinSans, rem(30px), 600);
     color: $bigTitlesColor;
     text-transform: uppercase;
-    font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 25px;
   }
   @include e(text) {
     margin: 0;
-    font-size: rem(19px);
+    @include font($fontFamilyJosefinSans, rem(19px), 400);
     color: $mainContentColor;
-    font-weight: 400;
     line-height: 25px;
     margin-bottom: 40px;
     @include m(lessmarbot) {
@@ -287,8 +274,7 @@
     background: transparent;
     color: $bigTitlesColor;
     border: 2px solid $bigTitlesColor;
-    font-size: rem(12px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(12px), 700);
     text-transform: uppercase;
     padding: 15px 35px 12px 32px;
     letter-spacing: 2px;
@@ -296,8 +282,7 @@
       background: $black;
       color: $white;
       border: 2px solid $bigTitlesColor;
-      font-size: rem(12px);
-      font-weight: 700;
+      @include font($fontFamilyJosefinSans, rem(12px), 700);
       text-transform: uppercase;
       padding: 15px 35px 12px 32px;
       letter-spacing: 2px;
@@ -319,17 +304,13 @@
   @include e(pos) {
     margin: 0;
     padding-left: 80px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: rem(13px);
-    font-weight: 600;
+    @include font(Arial, rem(13px), 600);
     color: $activeMenuLinkColor;
     margin-bottom: 55px;
   }
   &__description {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
     color: $mainContentColor;
     line-height: 25px;
     margin-bottom: rem(45px);
@@ -363,25 +344,19 @@
   }
   @include e(date) {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(14px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(14px), 400);
     margin-bottom: 15px;
   }
   @include e(title) {
     margin: 0;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(22px);
-    font-weight: 600;
+    @include font($fontFamilyJosefinSans, rem(22px), 600);
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 15px;
   }
   @include e(text) {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
     line-height: 28px;
     margin-bottom: 38px;
     @include m(first) {
@@ -392,13 +367,10 @@
     width: 15px;
     height: 16px;
     margin-right: 10px;
-    font-weight: bolder;
   }
   @include e(location) {
     margin: 0;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(12px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(12px), 700);
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -419,9 +391,7 @@
   }
   @include e(title) {
     margin: 0;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(16px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(16px), 700);
     color: $bigTitlesColor;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -429,9 +399,7 @@
   }
   @include e(text) {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
     color: $mainContentColor;
     line-height: 25px;
     margin-bottom: 10px;
@@ -471,13 +439,11 @@
 .button-box {
   @include flexColumn;
   &__item {
-    font-family: $fontFamilyJosefinSans;
     margin-bottom: 10px;
     background: transparent;
     color: $bigTitlesColor;
     border: 2px solid $bigTitlesColor;
-    font-size: rem(12px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(12px), 700);
     text-transform: uppercase;
     padding: 15px 35px 12px 32px;
     letter-spacing: 2px;
@@ -485,12 +451,10 @@
       margin-bottom: 0;
     }
     &:focus {
-      font-family: $fontFamilyJosefinSans;
       background: $black;
       color: $white;
       border: 2px solid $bigTitlesColor;
-      font-size: rem(12px);
-      font-weight: 700;
+      @include font($fontFamilyJosefinSans, rem(12px), 700);
       text-transform: uppercase;
       padding: 15px 35px 12px 32px;
       letter-spacing: 2px;
@@ -587,9 +551,7 @@
 .testimonials-title {
   grid-area: cont1;
   margin: 0;
-  font-family: $fontFamilyJosefinSans;
-  font-size: rem(30px);
-  font-weight: 600;
+  @include font($fontFamilyJosefinSans, rem(30px), 600);
   text-transform: uppercase;
   color: $white;
   letter-spacing: 1px;
@@ -599,19 +561,16 @@
   grid-area: img1;
 }
 .testimonials {
-  font-family: $fontFamilyJosefinSans;
   height: 180px;
   &__words {
+    @include font($fontFamilyJosefinSans, rem(22px), 700);
     margin: 0;
-    font-size: rem(22px);
-    font-weight: 700;
     color: $white;
     margin-bottom: 25px;
   }
   &__client {
     margin: 0;
-    font-size: rem(14px);
-    font-weight: 600;
+    @include font($fontFamilyJosefinSans, rem(14px), 600);
     color: $activeMenuLinkColor;
     margin-bottom: 10px;
   }
@@ -663,9 +622,7 @@
   }
   @include e(title) {
     margin: 0;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(16px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(16px), 700);
     letter-spacing: 1px;
     text-transform: uppercase;
     color: $bigTitlesColor;
@@ -673,9 +630,7 @@
   }
   @include e(text) {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
     color: $mainContentColor;
     line-height: 25px;
     margin-bottom: 25px;
@@ -683,30 +638,27 @@
 }
 
 // ====== weather-forecast =======
+.weather-content {
+  grid-area: cont1;
+}
 .weather-table {
   margin-bottom: 20px;
   &__dashed-row {
     border-bottom: 1px dashed $mainContentColor;
   }
   &__col1 {
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(11px);
-    font-weight: 700;
+    @include font($fontFamilyJosefinSans, rem(11px), 700);
     text-transform: uppercase;
     color: $black;
     letter-spacing: 1px;
   }
   &__col2 {
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(11px);
-    font-weight: 400;
+    @include font($fontFamilyJosefinSans, rem(11px), 400);
     color: $bgSecondEventColor;
   }
 
   &__col4 {
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(13px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(13px), 400);
     color: $mainContentColor;
   }
   &__icon {
@@ -718,21 +670,20 @@
 
 .weather-site {
   margin: 0;
-  font-family: $fontFamilySourceSansPro;
-  font-size: rem(17px);
-  font-weight: 600;
+  @include font($fontFamilySourceSansPro, rem(17px), 600);
   color: $buttonTurquoiseColor;
   margin-bottom: 50px;
   @include e(link) {
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 600;
+    @include font($fontFamilySourceSansPro, rem(17px), 600);
     color: $buttonTurquoiseColor;
     text-decoration: none;
   }
 }
 
 .weather-images {
+  grid-area: img1;
+  display: grid;
+  grid-gap: 20px;
   @include e(item) {
     width: 100%;
 
@@ -750,9 +701,7 @@
   }
   @include e(title) {
     margin: 0;
-    font-family: $fontFamilyJosefinSans;
-    font-size: rem(22px);
-    font-weight: 600;
+    @include font($fontFamilyJosefinSans, rem(22px), 600);
     text-transform: uppercase;
     color: $white;
     letter-spacing: 1px;
@@ -765,9 +714,7 @@
   }
   @include e(date) {
     margin: 0;
-    font-family: $fontFamilySourceSansPro;
-    font-size: rem(17px);
-    font-weight: 400;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
     color: $white;
     margin-bottom: 5px;
   }
@@ -780,9 +727,7 @@
 }
 .tripadvisor-text {
   margin: 0;
-  font-family: $fontFamilyJosefinSans;
-  font-size: rem(22px);
-  font-weight: 700;
+  @include font($fontFamilyJosefinSans, rem(22px), 700);
   line-height: 33px;
   color: $bigTitlesColor;
   margin-bottom: 25px;

@@ -4,6 +4,7 @@
   &__btn {
     display: block;
     width: 170px;
+    margin-left: 10px;
     background: $buttonTurquoiseColor;
     color: $white;
     @include font($fontFamilyJosefinSans, rem(12px), 700);
