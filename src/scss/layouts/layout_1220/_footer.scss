@@ -1,19 +1,29 @@
-// ============================= footer ===================================
-
 // ============ footer-top ===========
 .container_footer-top {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
-  grid-gap: 50px;
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
+  grid-gap: 30px;
 }
 
 // ==== instagram-gallery =====
 .instagram-gallery {
-  grid-template-columns: repeat(3, minmax(96px, 1fr));
+  grid-template-columns: repeat(6, minmax(35px, 1fr));
+  grid-template-rows: 1fr;
+  @include e(iconholder) {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 // ===== footer-bottom ======
-
+.container_footer-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.rights-box {
+  &__text {
+    align-self: center;
+  }
+}
 .info-box {
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));

@@ -125,10 +125,16 @@
     @include m(second) {
       grid-column: 1;
       grid-row: 2 / span 2;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100%;
     }
     @include m(third) {
       grid-column: 2;
       grid-row: 1 / span 2;
+      width: 100%;
+      max-width: 100%;
+      min-height: 100%;
     }
     @include m(fourth) {
       grid-column: 2;

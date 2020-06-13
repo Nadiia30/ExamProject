@@ -245,7 +245,7 @@ $(function () {
       },
 
       {
-        breakpoint: 1200,
+        breakpoint: 992,
         settings: "unslick",
       },
     ],
@@ -253,7 +253,7 @@ $(function () {
   const sl = $(".instagram-row-slider").slick(config);
 
   $(window).on("resize", function () {
-    if ($(window).width() < 1200 && !sl.hasClass("slick-initialized")) {
+    if ($(window).width() < 992 && !sl.hasClass("slick-initialized")) {
       $(".instagram-row-slider").slick(config);
     }
   });
