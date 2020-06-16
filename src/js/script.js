@@ -301,7 +301,7 @@ function handleSubmit(e) {
 
 let interval;
 function step() {
-  window.scrollBy(0, -5);
+  window.scrollBy(0, -30);
   const st = window.pageYOffset;
   if (st > 0) {
     interval = requestAnimationFrame(step);
@@ -311,7 +311,12 @@ function step() {
 }
 
 document.addEventListener("click", function (e) {
-  const target = e.target;
-  if (target.id !== "scroll-top") return;
-  interval = requestAnimationFrame(step);
+  const target = e.target.closest("#scroll-top");
+  console.log(target);
+
+  if (target) {
+    interval = requestAnimationFrame(step);
+  } else {
+    cancelAnimationFrame(interval);
+  }
 });

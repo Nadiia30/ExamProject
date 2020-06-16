@@ -1,0 +1,34 @@
+// ============ footer-top ===========
+.footer-box {
+  &__text {
+    transition: color 0.4s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $activeMenuLinkColor;
+    }
+  }
+}
+.footer-socialbox {
+  &__icon {
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $activeMenuLinkColor;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+}
+
+// ==== instagram-gallery =====
+.instagram-gallery {
+  @include e(item) {
+    position: relative;
+  }
+  @include e(iconholder) {
+    transition: all 0.5s ease-in-out;
+  }
+}
+.instagram-gallery__item:hover .instagram-gallery__iconholder {
+  transform: scale(1.5);
+  opacity: 1;
+}

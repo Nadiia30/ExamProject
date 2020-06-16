@@ -66,7 +66,7 @@
     @include flexRow;
     justify-content: center;
     align-items: center;
-    opacity: 1;
+    opacity: 0;
   }
   @include e(icon) {
     color: $white;
@@ -149,9 +149,10 @@
     margin-right: 10px;
   }
 }
-//====scroll-top===
+//======scroll-top======
 .scroll-top {
   position: fixed;
+  z-index: 1000;
   bottom: 85px;
   right: -40px;
   height: 35px;
