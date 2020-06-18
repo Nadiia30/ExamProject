@@ -103,7 +103,7 @@ function handleOpened(e) {
 */
 
 // ==== google-maps =====
-/*
+
 let map;
 const cnt = { lat: 32.802353, lng: -117.241676 };
 
@@ -135,7 +135,6 @@ document.getElementById("roadmap").onclick = function () {
 document.getElementById("satellite").onclick = function () {
   map.setMapTypeId("satellite");
 };
-*/
 
 // ===== show-hide team-info ======
 const teamInfo1 = $("#info1");
