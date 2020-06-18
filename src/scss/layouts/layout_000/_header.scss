@@ -17,7 +17,7 @@ body {
   margin: 0;
   text-indent: -9999px;
   position: relative;
-  padding-bottom: 34px;
+  padding-bottom: 48px;
   @include before(71px, 55px, 10px, 20px) {
     background: url(#{$imgPath}logo/logo-mobile.png) no-repeat;
     background-size: cover;

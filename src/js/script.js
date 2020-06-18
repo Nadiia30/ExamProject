@@ -81,89 +81,61 @@ $(function () {
   });
 });
 
-// ==== open-close surf paradise find out more===
-$(() => {
-  const aboutParadise = $(".surfers-paradise-toggle");
-  const paradiseBtn = $(".surfers-paradise-btn");
-  aboutParadise.hide();
-  paradiseBtn.text = "Find out more";
+// ==== toggle find out more ====
+/*
+document.addEventListener("click", handleOpened);
 
-  $(document).on("click", ".surfers-paradise-btn", (e) => {
-    const $this = $(e.target);
-    aboutParadise.slideToggle(function () {
-      const words = aboutParadise.is(":hidden")
-        ? "Find out more"
-        : "Close more";
-      $this.text(words);
-    });
-  });
-});
+function handleOpened(e) {
+  e.preventDefault();
+  const target = e.target;
+  const openId = target.dataset.openid;
+  if (openId !== "hide-text") {
+    return;
+  }
 
-// ==== open-close experience find out more ====
-$(() => {
-  const expSaying = $(".experts-saying");
-  const expertsBtn = $(".expertsBtn");
-  expSaying.hide();
-  expertsBtn.text = "Find out more";
+  const hiddenEl = target.nextElementSibling;
+  hiddenEl.classList.toggle("hidden");
 
-  $(document).on("click", ".expertsBtn", (e) => {
-    const $this = $(e.target);
-    expSaying.slideToggle(function () {
-      const words = expSaying.is(":hidden") ? "Find out more" : "Close more";
-      $this.text(words);
-    });
-  });
-});
-
-// ===== open-close location more info =====
-$(() => {
-  const locationInfo = $(".locationInfo");
-  const locationBtn = $(".locationBtn");
-  locationInfo.hide();
-  locationBtn.text("Find out more");
-
-  $(document).on("click", ".locationBtn", (e) => {
-    const $this = $(e.target);
-    locationInfo.slideToggle(function () {
-      const words = locationInfo.is(":hidden") ? "Find out more" : "Close more";
-      $this.text(words);
-    });
-  });
-});
+  target.textContent = hiddenEl.classList.contains("hidden")
+    ? "Find out more"
+    : "Close more";
+}
+*/
 
 // ==== google-maps =====
+/*
+let map;
+const cnt = { lat: 32.802353, lng: -117.241676 };
 
-// let map;
-// const cnt = { lat: 32.802353, lng: -117.241676 };
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: cnt,
+    zoom: 10,
+  });
 
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: cnt,
-//     zoom: 10,
-//   });
+  const marker = new google.maps.Marker({
+    position: cnt,
+    map,
+    title: "San Diego, California",
+    icon: "i/map1.png",
+  });
 
-//   const marker = new google.maps.Marker({
-//     position: cnt,
-//     map,
-//     title: "San Diego, California",
-//     icon: "i/map1.png",
-//   });
+  const infowindow = new google.maps.InfoWindow({
+    content: "Pacific Beach, San Diego, California",
+  });
+  marker.addListener("click", function () {
+    infowindow.open(map, marker);
+  });
+}
 
-//   const infowindow = new google.maps.InfoWindow({
-//     content: "Pacific Beach, San Diego, California",
-//   });
-//   marker.addListener("click", function () {
-//     infowindow.open(map, marker);
-//   });
-// }
+document.getElementById("roadmap").onclick = function () {
+  map.setMapTypeId("roadmap");
+};
 
-// document.getElementById("roadmap").onclick = function () {
-//   map.setMapTypeId("roadmap");
-// };
-
-// document.getElementById("satellite").onclick = function () {
-//   map.setMapTypeId("satellite");
-// };
+document.getElementById("satellite").onclick = function () {
+  map.setMapTypeId("satellite");
+};
+*/
 
 // ===== show-hide team-info ======
 const teamInfo1 = $("#info1");
@@ -199,7 +171,7 @@ $(function () {
   $("#testimonials-slider").slick({
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     vertical: true,
     arrows: true,
     prevArrow:
@@ -312,7 +284,6 @@ function step() {
 
 document.addEventListener("click", function (e) {
   const target = e.target.closest("#scroll-top");
-  console.log(target);
 
   if (target) {
     interval = requestAnimationFrame(step);

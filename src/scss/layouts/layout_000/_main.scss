@@ -20,13 +20,17 @@
     min-height: 516px;
   }
 }
-.slider-logo-holder {
+.logo-holder {
   position: relative;
   top: 100px;
   display: grid;
   justify-items: center;
 }
-.slider-logo {
+.logo-text {
+  font-size: 1px;
+  text-indent: -9999px;
+}
+.logo-img {
   width: 248px;
   position: absolute;
   z-index: 100;
@@ -64,7 +68,7 @@
 .dots-box button:focus {
   outline: none;
 }
-.slick-active {
+.container_dots .slick-active {
   background: $buttonTurquoiseColor;
 }
 //============= fluid-containers =========================
@@ -105,6 +109,11 @@
   }
   &_success {
     background: url(#{$imgPath}palm.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  &_404 {
+    background: url(#{$imgPath}404-page.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
   }
@@ -278,6 +287,7 @@
     text-transform: uppercase;
     padding: 15px 35px 12px 32px;
     letter-spacing: 2px;
+
     &:focus {
       background: $black;
       color: $white;
@@ -286,6 +296,7 @@
       text-transform: uppercase;
       padding: 15px 35px 12px 32px;
       letter-spacing: 2px;
+      margin-bottom: 15px;
     }
     @include m(success) {
       text-decoration: none;
@@ -320,7 +331,9 @@
     padding-right: 15px;
   }
 }
-
+.hidden {
+  display: none;
+}
 // ======= event-box=======
 
 .event-box {
@@ -543,9 +556,7 @@
     margin-left: 12px;
   }
 }
-.team-member__vertical.hidden {
-  display: none;
-}
+
 .team-member__info.invisible {
   display: none;
 }
@@ -747,4 +758,36 @@
 .instagram-row-image {
   width: 100%;
   max-width: 100%;
+}
+
+// ===== 404 page not found =====
+
+.container_404 {
+  padding: 40px 20px;
+  text-align: center;
+}
+.article-content {
+  &__title {
+    &_404 {
+      color: $white;
+    }
+  }
+  &__text {
+    &_404 {
+      color: $white;
+    }
+  }
+  &__btn {
+    &_404 {
+      border-color: $white;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+.header-404 {
+  margin: 0;
+  @include font($fontFamilyMrDafoe, rem(120px), 400);
+  color: $white;
+  margin-bottom: 50px;
 }

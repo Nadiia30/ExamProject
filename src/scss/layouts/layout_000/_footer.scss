@@ -19,6 +19,13 @@
     line-height: 25px;
     margin-bottom: 15px;
   }
+  @include e(link) {
+    margin: 0;
+    @include font($fontFamilySourceSansPro, rem(17px), 400);
+    color: $footerTextColor;
+    line-height: 25px;
+    margin-bottom: 15px;
+  }
   @include e(icon) {
     color: $white;
     width: 15px;
