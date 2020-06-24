@@ -8,10 +8,6 @@
   }
 }
 
-.container_grid-6 {
-  grid-template-columns: 1fr minmax(auto, 410px) 1fr;
-}
-
 .weather-table {
   &__col1 {
     padding: 10px;

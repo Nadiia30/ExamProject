@@ -1,4 +1,4 @@
-// ==== mobile-menu =====
+// ==== mobile-menu ====
 const menuButton = $(".menu-button");
 const mobileMenu = $(".mobile-menu");
 
@@ -31,6 +31,7 @@ function handleMenu(e) {
   mobileMenu.toggleClass("visible");
 }
 
+// ==== simple state manager ====
 function initMobile() {
   console.log("is-mobile");
 }
@@ -68,7 +69,7 @@ ssm.addStates([
   },
 ]);
 
-// ==== slick slider =====
+// ==== first slick slider ====
 $(function () {
   $(".slider").slick({
     autoplay: true,
@@ -81,18 +82,17 @@ $(function () {
   });
 });
 
-// ==== toggle find out more ====
-/*
+// ==== toggle button find out more ====
+
 document.addEventListener("click", handleOpened);
 
 function handleOpened(e) {
-  e.preventDefault();
   const target = e.target;
   const openId = target.dataset.openid;
   if (openId !== "hide-text") {
     return;
   }
-
+  e.preventDefault();
   const hiddenEl = target.nextElementSibling;
   hiddenEl.classList.toggle("hidden");
 
@@ -100,9 +100,8 @@ function handleOpened(e) {
     ? "Find out more"
     : "Close more";
 }
-*/
 
-// ==== google-maps =====
+// ==== google-maps ====
 
 let map;
 const cnt = { lat: 32.802353, lng: -117.241676 };
@@ -136,7 +135,7 @@ document.getElementById("satellite").onclick = function () {
   map.setMapTypeId("satellite");
 };
 
-// ===== show-hide team-info ======
+// ==== show-hide team-info ====
 const teamInfo1 = $("#info1");
 const posVert1 = $("#member1");
 const teamInfo2 = $("#info2");
@@ -165,7 +164,7 @@ function hideInfo() {
   $this.siblings("p").removeClass("hidden");
 }
 
-// ===== testimonials-slider ======
+// ==== testimonials-slider ====
 $(function () {
   $("#testimonials-slider").slick({
     autoplay: true,
@@ -180,7 +179,7 @@ $(function () {
   });
 });
 
-// === instagram-row-slider =====
+// ==== instagram-row-slider ====
 
 $(function () {
   const config = {
@@ -268,7 +267,7 @@ function handleSubmit(e) {
   newsletterForm.email.value = "";
 }
 
-// ====scroll-top ===
+// ==== scroll-top ====
 
 let interval;
 function step() {

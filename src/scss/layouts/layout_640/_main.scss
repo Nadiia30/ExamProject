@@ -4,7 +4,7 @@
     font-size: rem(35px);
   }
 }
-
+// ======= fluid-container_articles =======
 .container_grid {
   grid-template-columns: 1fr minmax(auto, 550px) 1fr;
 }
@@ -60,8 +60,10 @@
 
 // ====== gallery ======
 .fluid-container_gallery {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px;
 }
 .gallery-item_1 {
   grid-column: 1 / span 2;
@@ -87,11 +89,18 @@
   grid-column: 2;
   grid-row: 4;
 }
-
 .gallery-item {
-  //height: 100%;
+  margin-bottom: 0;
+}
+.gallery-item_2,
+.gallery-item_3,
+.gallery-item_4,
+.gallery-item_5,
+.gallery-item_6 {
+  height: 100%;
 }
 
+// ===== weather forecast =====
 .weather-table {
   &__col1 {
     font-size: rem(14px);

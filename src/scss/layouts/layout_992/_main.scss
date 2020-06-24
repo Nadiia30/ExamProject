@@ -8,6 +8,7 @@
   }
 }
 .service-box__item:hover .service-box__img {
+  cursor: pointer;
   transform: scale(1.1);
 }
 // ====== 4 column grid container ======
@@ -36,7 +37,20 @@
     height: 395px;
   }
 }
+.btn-info {
+  &:hover {
+    cursor: pointer;
+  }
+}
 
+// ===== event-box =====
+.event-box {
+  &__content {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
 // ====== gallery ======
 
 .fluid-container_gallery {
@@ -65,21 +79,33 @@
   grid-row: 2;
 }
 
-// ====== 6 column grid container ======
-.container_grid-6 {
-  grid-template-columns: 1fr minmax(950px, 1fr) 1fr;
-}
+// ======= surfcoaching ========
 
 .surfcoaching-box,
 .abilities-box {
   grid-gap: 15px;
   grid-template-columns: repeat(4, minmax(210px, 1fr));
   justify-content: center;
-}
-
-.surfcoaching-box {
   &__item {
     position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.abilities-box__item:hover .abilities-box__image {
+  animation: fade 1.3s ease;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .surfcoaching-box__item:hover .surfcoaching-box__image {
@@ -97,9 +123,41 @@
     transform: rotate(0deg) scale(1);
   }
 }
+
+// ===== location =====
+.button-box {
+  &__item {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//====== team-container ======
+
+.team-member {
+  &__vertical {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__info {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
 //=====instagram-row-slider ======
 
 .instagram-row-slider {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+}
+// ===== newsletter-form =====
+.newsletter-form {
+  &__btn {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

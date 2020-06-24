@@ -93,10 +93,6 @@
 
 // ======= surfcoaching ========
 
-.container_grid-6 {
-  grid-template-columns: 1fr minmax(700px, 1fr) 1fr;
-}
-
 .surfcoaching-box,
 .abilities-box {
   display: grid;

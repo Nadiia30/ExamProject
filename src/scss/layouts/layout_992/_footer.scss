@@ -1,12 +1,13 @@
 // ====== footer-top ========
-.footer-box {
-  &__link {
-    transition: color 0.4s ease-in-out;
-    &:hover {
-      cursor: pointer;
-      color: $activeMenuLinkColor;
-    }
-  }
+.footer-box__link p {
+  transition: color 0.4s ease-in-out;
+}
+.footer-box__link p:hover {
+  cursor: pointer;
+  color: $activeMenuLinkColor;
+}
+.footer-box__link {
+  margin-right: 50px;
 }
 .footer-socialbox {
   &__icon {
@@ -34,12 +35,10 @@
 }
 
 //====== footer-bottom ======
-.info-box {
-  &__item {
-    transition: color 0.4s ease-in-out;
-    &:hover {
-      cursor: pointer;
-      color: $activeMenuLinkColor;
-    }
-  }
+.info-box__item p {
+  transition: color 0.4s ease-in-out;
+}
+.info-box__item p:hover {
+  cursor: pointer;
+  color: $activeMenuLinkColor;
 }

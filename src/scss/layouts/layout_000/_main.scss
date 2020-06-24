@@ -1,4 +1,4 @@
-//============= slider start=========================
+//====== slider start=========
 
 .slider-img {
   &_first {
@@ -71,7 +71,7 @@
 .container_dots .slick-active {
   background: $buttonTurquoiseColor;
 }
-//============= fluid-containers =========================
+//======= fluid-containers =========
 
 .fluid-container {
   width: 100%;
@@ -110,12 +110,12 @@
   &_success {
     background: url(#{$imgPath}palm.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
   }
   &_404 {
     background: url(#{$imgPath}404-page.jpg) no-repeat center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -446,52 +446,16 @@
     max-width: 100%;
   }
 }
-.map-holder {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.map {
-  margin-bottom: 20px;
-  height: 400px;
-  width: 100%;
-}
-.button-box {
-  @include flexColumn;
-  &__item {
-    margin-bottom: 10px;
-    background: transparent;
-    color: $bigTitlesColor;
-    border: 2px solid $bigTitlesColor;
-    @include font($fontFamilyJosefinSans, rem(12px), 700);
-    text-transform: uppercase;
-    padding: 15px 35px 12px 32px;
-    letter-spacing: 2px;
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-    &:focus {
-      background: $black;
-      color: $white;
-      border: 2px solid $bigTitlesColor;
-      @include font($fontFamilyJosefinSans, rem(12px), 700);
-      text-transform: uppercase;
-      padding: 15px 35px 12px 32px;
-      letter-spacing: 2px;
-    }
-  }
-}
 
 // ====== gallery =======
-.fluid-container_gallery {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr repeat(4, 2fr);
-  grid-gap: 20px;
-}
+
 .gallery-item {
   width: 100%;
   max-width: 100%;
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 // ====== team ==========
@@ -560,9 +524,45 @@
 .team-member__info.invisible {
   display: none;
 }
+
 // ==== locations====
 .map-holder {
   grid-area: img1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.map {
+  margin-bottom: 20px;
+  height: 400px;
+  width: 100%;
+}
+.button-box {
+  align-items: center;
+  @include flexColumn;
+  &__item {
+    width: 200px;
+    margin-bottom: 10px;
+    background: transparent;
+    color: $bigTitlesColor;
+    border: 2px solid $bigTitlesColor;
+    @include font($fontFamilyJosefinSans, rem(12px), 700);
+    text-transform: uppercase;
+    padding: 15px 35px 12px 32px;
+    letter-spacing: 2px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &:focus {
+      width: 200px;
+      background: $black;
+      color: $white;
+      border: 2px solid $bigTitlesColor;
+      @include font($fontFamilyJosefinSans, rem(12px), 700);
+      text-transform: uppercase;
+      padding: 15px 35px 12px 32px;
+      letter-spacing: 2px;
+    }
+  }
 }
 // ====== testimonials ========
 
@@ -620,22 +620,8 @@
 
 // ======= surfcoaching ========
 
-.container_grid-6 {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 300px) 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas:
-    ". title ."
-    ". text .";
-}
-
-.article-content_surfcoaching,
-.article-content_abilities-row {
-  grid-area: title;
-}
 .surfcoaching-box,
 .abilities-box {
-  grid-area: text;
   padding-top: 60px;
 
   @include e(image) {
@@ -763,6 +749,7 @@
 // ===== 404 page not found =====
 
 .container_404 {
+  min-height: 100vh;
   padding: 40px 20px;
   text-align: center;
 }

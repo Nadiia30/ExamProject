@@ -25,6 +25,8 @@
     color: $footerTextColor;
     line-height: 25px;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
   }
   @include e(icon) {
     color: $white;
@@ -32,6 +34,9 @@
     height: 15px;
     margin-right: 10px;
   }
+}
+.footer-box__link p {
+  margin: 0;
 }
 .footer-socialbox {
   @include flexRow;
@@ -144,7 +149,8 @@
   @include flexColumn;
   color: $white;
   @include e(item) {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin: 0;
     @include font($fontFamilySourceSansPro, rem(16px), 400);
     margin-top: 20px;
@@ -155,6 +161,9 @@
     height: 14px;
     margin-right: 10px;
   }
+}
+.info-box__item p {
+  margin: 0;
 }
 //======scroll-top======
 .scroll-top {
