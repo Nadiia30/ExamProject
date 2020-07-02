@@ -379,6 +379,7 @@
     }
   }
   @include e(icon) {
+    --icon-color: #fff;
     width: 15px;
     height: 16px;
     margin-right: 10px;
@@ -424,16 +425,6 @@
 .experience-row {
   padding-top: 129px;
   padding-bottom: 125px;
-  position: relative;
-  &__years {
-    font-family: $fontFamilyMrDafoe;
-    font-size: 272px;
-    color: $experienceBgYears;
-    position: absolute;
-    top: 45px;
-    left: -17px;
-    z-index: -1;
-  }
 }
 .experts {
   margin-top: 30px;
@@ -515,6 +506,7 @@
     justify-content: flex-end;
   }
   &__icon {
+    --icon-color: #fff;
     width: 13px;
     height: 15px;
     margin-left: 12px;

@@ -29,7 +29,7 @@
     align-items: center;
   }
   @include e(icon) {
-    color: $white;
+    --icon-color: #fff;
     width: 15px;
     height: 15px;
     margin-right: 10px;
@@ -40,10 +40,10 @@
 }
 .footer-socialbox {
   @include flexRow;
-  color: $white;
   margin-top: 10px;
   margin-bottom: 10px;
   @include e(icon) {
+    --icon-color: #fff;
     width: 16px;
     height: 16px;
     margin-right: 20px;
@@ -81,7 +81,7 @@
     opacity: 0;
   }
   @include e(icon) {
-    color: $white;
+    --icon-color: #fff;
     width: 8px;
     height: 8px;
   }
@@ -157,6 +157,7 @@
     color: $white;
   }
   @include e(icon) {
+    --icon-color: #fff;
     width: 14px;
     height: 14px;
     margin-right: 10px;

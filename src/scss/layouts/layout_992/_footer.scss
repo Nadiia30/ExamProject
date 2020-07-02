@@ -11,10 +11,9 @@
 }
 .footer-socialbox {
   &__icon {
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease;
     &:hover {
-      color: $activeMenuLinkColor;
-      transform: scale(1.05);
+      --icon-color: #16d5cc;
       cursor: pointer;
     }
   }

@@ -45,14 +45,14 @@ header {
 .svg-waves {
   width: 25px;
   height: 20px;
-  color: $white;
+  --icon-color: #fff;
   display: block;
   align-self: center;
 }
 .svg-close {
   width: 25px;
   height: 20px;
-  color: $white;
+  --icon-color: #fff;
   display: block;
   align-self: center;
 }
