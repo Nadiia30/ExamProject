@@ -6,7 +6,8 @@
   "scripts": {
     "webpack": "webpack",
     "start": "webpack-dev-server  --env.mode development --progress --hide-modules --open",
-    "build": "npm run webpack -- --env.mode production"
+    "build": "npm run webpack -- --env.mode production && npm run server",
+    "server": "browser-sync start -s -w  --ss=\"./dist/\" -f=\"./index.html\" --no-notify"
   },
   "keywords": [
     "Beetroot",
