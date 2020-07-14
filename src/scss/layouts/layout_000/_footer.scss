@@ -126,7 +126,10 @@
 .form-group {
   @include flexColumn;
 }
-
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px $footerTopBgColor;
+  -webkit-text-fill-color: white;
+}
 // ===== footer-bottom ======
 
 .rights-box {
