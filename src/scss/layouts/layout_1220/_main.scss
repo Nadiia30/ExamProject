@@ -1,12 +1,13 @@
-// ====== 4 column grid container ======
-.container_grid {
-  grid-column-gap: 20px;
-  grid-template-columns: 1fr repeat(2, minmax(auto, 635px)) 1fr;
-  grid-template-areas: ". cont1 img1 .";
-  align-items: center;
+.container_flex {
+  @include flexRow;
+  justify-content: space-around;
 }
-
+.article-content {
+  flex-basis: 48%;
+  align-self: center;
+}
 .article-pic {
+  flex-basis: 48%;
   &_video {
     width: 535px;
     height: 368px;
@@ -26,6 +27,26 @@
 .service-box {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+  &__item {
+    &_first {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+    }
+    &_second {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+    }
+    &_third {
+      -ms-grid-row: 1;
+      -ms-grid-column: 3;
+    }
+    &_fourth {
+      -ms-grid-row: 1;
+      -ms-grid-column: 4;
+    }
+  }
   &__content {
     top: 40px;
   }
@@ -48,7 +69,31 @@
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   justify-content: center;
 }
+
+.map-holder {
+  flex-basis: 48%;
+}
 // ====== team-container ======
 .fluid-container_team {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.testimonials-title {
+  flex-basis: 35%;
+}
+.testimonials-box {
+  flex-basis: 60%;
+}
+
+.weather-content {
+  flex-basis: 45%;
+}
+.weather-images {
+  flex-basis: 45%;
+}
+.tripadvisor-img {
+  flex-basis: 30%;
+}
+.tripadvisor-text {
+  flex-basis: 65%;
 }

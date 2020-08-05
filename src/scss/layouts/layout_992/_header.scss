@@ -5,9 +5,8 @@
 
 .header-top {
   padding: 15px 40px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid $experienceBgYears;
   @include e(social) {
     display: flex;

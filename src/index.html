@@ -70,37 +70,37 @@
           <p class="header-top__title">Follow us:</p>
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#twitter" /></svg
+              <use xlink:href="i/icons/sprite.svg#twitter"></use></svg
           ></a>
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#facebook" /></svg
+              <use xlink:href="i/icons/sprite.svg#facebook"></use></svg
           ></a>
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#instagram" /></svg
+              <use xlink:href="i/icons/sprite.svg#instagram"></use></svg
           ></a>
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#linkedin" /></svg
+              <use xlink:href="i/icons/sprite.svg#linkedin"></use></svg
           ></a>
         </div>
         <div class="header-top__contacts">
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#phone" />
+              <use xlink:href="i/icons/sprite.svg#phone"></use>
             </svg>
             <p class="header-top__phone">156-677-124-442-2887</p></a
           >
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#message" />
+              <use xlink:href="i/icons/sprite.svg#message"></use>
             </svg>
             <p class="header-top__mail">wave@qodeinteractive.com</p></a
           >
           <a href="#" class="header-top__item"
             ><svg class="header-top__icon">
-              <use xlink:href="i/icons/sprite.svg#location" />
+              <use xlink:href="i/icons/sprite.svg#location"></use>
             </svg>
             <p class="header-top__address">
               184 Main Collins Street Victoria 8007
@@ -109,7 +109,7 @@
         </div>
       </div>
 
-      <!-- ======== desktop-menu =========== -->
+      <!-- ======== desktop-menu ===========  -->
 
       <div class="header-bottom">
         <button class="header-bottom__btn">Book today</button>
@@ -199,29 +199,29 @@
         <div class="right-side">
           <a href="#" class="right-side__search"
             ><svg class="header-bottom__icon">
-              <use xlink:href="i/icons/sprite.svg#search" /></svg
+              <use xlink:href="i/icons/sprite.svg#search"></use></svg
             >search</a
           >
           <a href="#" class="right-side__cart"
             ><svg class="header-bottom__icon">
-              <use xlink:href="i/icons/sprite.svg#shopping" /></svg
+              <use xlink:href="i/icons/sprite.svg#shopping"></use></svg
             >cart</a
           >
           <button>
             <span href="#" class="circle-button"
               ><svg class="svg-waves">
-                <use xlink:href="i/icons/sprite.svg#waves" /></svg
+                <use xlink:href="i/icons/sprite.svg#waves"></use></svg
             ></span>
           </button>
         </div>
       </div>
 
-      <!-- ======= mobile-menu ====== -->
+      <!-- ======= mobile-menu ======  -->
       <div class="ontop-mobile">
         <h3 class="logo-mobile">Wave ride</h3>
         <span href="#" class="menu-button"
           ><svg class="svg-waves">
-            <use xlink:href="i/icons/sprite.svg#waves" /></svg
+            <use xlink:href="i/icons/sprite.svg#waves"></use></svg
         ></span>
       </div>
       <div class="mobile-menu">
@@ -229,7 +229,7 @@
           <h3 class="logo-mobile logo-mobile_menu-opened">Wave ride</h3>
           <span href="#" class="menu-button">
             <svg class="svg-close">
-              <use xlink:href="i/icons/sprite.svg#close" />
+              <use xlink:href="i/icons/sprite.svg#close"></use>
             </svg>
           </span>
         </div>
@@ -327,7 +327,7 @@
     <!-- ======= main continue========= -->
     <!-- ======= articles ======= -->
     <div class="fluid-container fluid-container_articles">
-      <div class="container container_grid container_video">
+      <div class="container container_flex container_video">
         <div class="article-pic article-pic_video">
           <button class="article-pic__btn">
             <img class="playbutton-icon" src="i/icons/play.svg" />
@@ -339,22 +339,28 @@
             Lorem ipsum dolor sit amet, con secte tur adip si cin elit, do eius
             mod tempor in cidi dut ut la bore magna aliquat enim ad.
           </p>
-          <button class="btn-info article-content__btn" data-openid="hide-text">
-            Find out more
-          </button>
-          <article class="article-content hidden">
-            <p class="article-content__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              beatae quaerat aut molestiae aperiam facilis omnis, excepturi
-              perspiciatis accusamus veniam vel dolores blanditiis corporis nemo
-              ipsam autem libero harum vitae praesentium quis? Ad nihil fugit
-              labore minus aspernatur modi nisi corporis odio. Alias deserunt
-              modi libero, atque quo necessitatibus quam?
-            </p>
-          </article>
         </article>
       </div>
-      <div class="container container_grid container_surftips">
+      <div class="container container_more">
+        <input
+          type="button"
+          class="btn-info article-content__btn"
+          data-openid="hide-text"
+          value="Find out more"
+        />
+
+        <article class="article-content hidden">
+          <p class="article-content__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            beatae quaerat aut molestiae aperiam facilis omnis, excepturi
+            perspiciatis accusamus veniam vel dolores blanditiis corporis nemo
+            ipsam autem libero harum vitae praesentium quis? Ad nihil fugit
+            labore minus aspernatur modi nisi corporis odio. Alias deserunt modi
+            libero, atque quo necessitatibus quam?
+          </p>
+        </article>
+      </div>
+      <div class="container container_flex container_surftips">
         <article class="article-content">
           <h2 class="article-content__title">Top surf lessons</h2>
           <p class="article-content__text">
@@ -395,7 +401,7 @@
           </p>
           <span class="event-box__location"
             ><svg class="event-box__icon">
-              <use xlink:href="i/icons/sprite.svg#location" /></svg
+              <use xlink:href="i/icons/sprite.svg#location"></use></svg
             >Miami Beach, Florida</span
           >
         </article>
@@ -513,7 +519,7 @@
           </section>
         </article>
 
-        <article class="experience-row container container_grid">
+        <article class="experience-row container container_flex">
           <article class="article-content">
             <h2 class="article-content__title">
               Over 10 years in the game
@@ -528,29 +534,30 @@
               enim ad minim veniam, quis nostrud exercitation ullamco sed do
               eiusmod te.
             </p>
-            <button
-              class="btn-info article-content__btn"
-              data-openid="hide-text"
-            >
-              Find out more
-            </button>
-            <article class="article-content hidden">
-              <p class="article-content__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda expedita quasi incidunt sunt quis odio ut deleniti
-                fuga unde, facere necessitatibus dolorum? Non suscipit in, odio
-                eos quod nisi cum deleniti ducimus facere iure laboriosam
-                numquam fuga inventore eaque fugit praesentium maxime!
-                Distinctio, repellat placeat tenetur sequi doloremque a
-                recusandae.
-              </p>
-            </article>
           </article>
           <div class="experts">
             <img class="experts__img" src="i/experience/exp.jpg" />
             <img class="experts__img" src="i/experience/exp2.jpg" />
           </div>
         </article>
+        <div class="container container_more">
+          <input
+            type="button"
+            class="btn-info article-content__btn"
+            data-openid="hide-text"
+            value="Find out more"
+          />
+          <article class="article-content hidden">
+            <p class="article-content__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              expedita quasi incidunt sunt quis odio ut deleniti fuga unde,
+              facere necessitatibus dolorum? Non suscipit in, odio eos quod nisi
+              cum deleniti ducimus facere iure laboriosam numquam fuga inventore
+              eaque fugit praesentium maxime! Distinctio, repellat placeat
+              tenetur sequi doloremque a recusandae.
+            </p>
+          </article>
+        </div>
       </div>
     </div>
 
@@ -565,7 +572,7 @@
     </div>
     <!-- ========== location ======= -->
     <div class="fluid-container fluid-container_location">
-      <article class="container container_grid container_location">
+      <article class="container container_flex container_location">
         <article class="article-content">
           <h2 class="article-content__title">Great locations</h2>
           <p class="article-content__text">
@@ -573,19 +580,6 @@
             voluptate excepturi illo, modi inventore dolor! Debitis rem
             recusandae adipisci!
           </p>
-          <button class="btn-info article-content__btn" data-openid="hide-text">
-            Find out more
-          </button>
-          <article class="article-content hidden">
-            <p class="article-content__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-              eius quo, eos non provident architecto voluptatum. Eveniet ea
-              provident dolorem similique sunt. Reiciendis perspiciatis earum,
-              itaque recusandae id fugiat ratione sit natus quo repellat quis
-              consequuntur magni, impedit odit cumque hic similique
-              necessitatibus animi ea at, numquam vel officia nihil?
-            </p>
-          </article>
         </article>
         <div class="map-holder">
           <div class="map-box">
@@ -601,6 +595,24 @@
           </div>
         </div>
       </article>
+      <div class="container container_more">
+        <input
+          type="button"
+          class="btn-info article-content__btn"
+          data-openid="hide-text"
+          value="Find out more"
+        />
+        <article class="article-content hidden">
+          <p class="article-content__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            eius quo, eos non provident architecto voluptatum. Eveniet ea
+            provident dolorem similique sunt. Reiciendis perspiciatis earum,
+            itaque recusandae id fugiat ratione sit natus quo repellat quis
+            consequuntur magni, impedit odit cumque hic similique necessitatibus
+            animi ea at, numquam vel officia nihil?
+          </p>
+        </article>
+      </div>
     </div>
     <!-- ======== team-container ======== -->
     <div class="fluid-container fluid-container_team">
@@ -704,7 +716,7 @@
     </div>
     <!-- ========= testimonials ======== -->
     <div class="fluid-container fluid-container_testimonials">
-      <div class="container container_grid container_testimonials">
+      <div class="container container_flex container_testimonials">
         <h2 class="testimonials-title">Testimonials</h2>
 
         <div class="testimonials-box">
@@ -784,7 +796,7 @@
       </div>
     </div>
     <!-- ======== weather forecast ========== -->
-    <div class="container container_grid container_weather">
+    <div class="container container_flex container_weather">
       <article class="weather-content">
         <article class="article-content">
           <h2 class="article-content__title">
@@ -858,7 +870,7 @@
     </div>
     <!-- ======== tripadvisor award ======= -->
     <div class="fluid-container fluid-container_tripadvisor">
-      <article class="container container_tripadvisor">
+      <article class="container container_flex container_tripadvisor">
         <div class="tripadvisor-img"><img src="i/tripadv.png" /></div>
 
         <p class="tripadvisor-text">

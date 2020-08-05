@@ -23,12 +23,12 @@
 .logo-holder {
   position: relative;
   top: 100px;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
 }
 .logo-text {
   font-size: 1px;
-  text-indent: -9999px;
+  visibility: hidden;
 }
 .logo-img {
   width: 248px;
@@ -132,7 +132,6 @@
   }
   @include m(location) {
     padding-top: 125px;
-    padding-bottom: 125px;
     text-align: center;
   }
   @include m(testimonials) {
@@ -160,6 +159,11 @@
   @include m(success) {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+  @include m(more) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
   }
 }
 
@@ -202,27 +206,20 @@
   }
 }
 
-// ======= fluid-container_articles =======
-.container_grid {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 314px) 1fr;
-  grid-template-rows: repeat(2, auto);
-  justify-content: center;
-  grid-template-areas:
-    ". cont1 ."
-    ". img1 .";
+//======= fluid-container_articles =======
+.container_flex {
+  @include flexColumn;
 }
 .article-pic {
-  grid-area: img1;
   &_video {
+    align-self: center;
     background: url(#{$imgPath}articles/video-img.jpg) no-repeat;
     background-size: cover;
-    width: 300px;
+    width: 295px;
     height: 206px;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    grid-area: cont1;
   }
 
   &__btn {
@@ -237,13 +234,12 @@
     }
   }
   &_two {
-    display: grid;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    grid-row-gap: 30px;
+    @include flexColumn;
+    justify-content: space-between;
   }
   &__img1 {
     width: 100%;
+    margin-bottom: 15px;
   }
   &__second {
     @include flexRow;
@@ -255,10 +251,8 @@
 }
 
 .article-content {
-  grid-area: cont1;
   &_video {
     margin-top: 80px;
-    grid-area: img1;
   }
 
   @include e(title) {
@@ -274,6 +268,7 @@
     @include font($fontFamilyJosefinSans, rem(19px), 400);
     color: $mainContentColor;
     line-height: 25px;
+    margin-top: 15px;
     margin-bottom: 40px;
     @include m(lessmarbot) {
       margin-bottom: 15px;
@@ -424,17 +419,12 @@
 
 .experience-row {
   padding-top: 129px;
-  padding-bottom: 125px;
 }
 .experts {
   margin-top: 30px;
-  grid-area: img1;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 30px;
   &__img {
     width: 100%;
-    max-width: 100%;
+    margin-bottom: 30px;
   }
 }
 
@@ -452,6 +442,7 @@
 // ====== team ==========
 
 .team-member {
+  overflow-x: hidden;
   position: relative;
   margin-bottom: 30px;
   &__img {
@@ -468,9 +459,10 @@
     width: 257px;
     text-align: right;
     position: absolute;
+
     top: 127px;
     right: 0;
-    z-index: 99999;
+    // z-index: 99999;
   }
   &__name {
     margin: 0;
@@ -519,7 +511,6 @@
 
 // ==== locations====
 .map-holder {
-  grid-area: img1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -559,7 +550,6 @@
 // ====== testimonials ========
 
 .testimonials-title {
-  grid-area: cont1;
   margin: 0;
   margin-left: 15px;
   @include font($fontFamilyJosefinSans, rem(30px), 600);
@@ -569,7 +559,6 @@
   margin-bottom: 30px;
 }
 .testimonials-box {
-  grid-area: img1;
   margin-left: 15px;
 }
 .testimonials {
@@ -637,9 +626,7 @@
 }
 
 // ====== weather-forecast =======
-.weather-content {
-  grid-area: cont1;
-}
+
 .weather-table {
   margin-bottom: 20px;
   &__dashed-row {
@@ -680,7 +667,6 @@
 }
 
 .weather-images {
-  grid-area: img1;
   display: grid;
   grid-gap: 20px;
   @include e(item) {

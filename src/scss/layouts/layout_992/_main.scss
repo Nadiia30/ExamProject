@@ -14,19 +14,13 @@
 .service-box__content:hover {
   cursor: pointer;
 }
-// ====== 4 column grid container ======
-.container_grid {
-  grid-template-columns: 1fr minmax(auto, 768px) 1fr;
-}
+// =====articles====
 .article-pic {
   &_video {
     width: 768px;
     height: 654px;
   }
-  &_two {
-    grid-template-columns: auto auto;
-    grid-column-gap: 30px;
-  }
+
   &__img1 {
     width: 370px;
   }

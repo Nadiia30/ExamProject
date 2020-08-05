@@ -96,7 +96,7 @@ function handleOpened(e) {
   const hiddenEl = target.nextElementSibling;
   hiddenEl.classList.toggle("hidden");
 
-  target.textContent = hiddenEl.classList.contains("hidden")
+  target.value = hiddenEl.classList.contains("hidden")
     ? "Find out more"
     : "Close more";
 }
