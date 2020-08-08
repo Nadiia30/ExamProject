@@ -56,18 +56,48 @@
 }
 // ======= event-box=======
 .event-box {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "cont1 img1 img2 cont2"
     "cont3 img3 img4 cont4";
+  &__item {
+    &_1 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+    }
+    &_2 {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+    }
+    &_3 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+    }
+    &_4 {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+    }
+  }
 }
 
 // ======= surfcoaching ========
-.surfcoaching-box,
-.abilities-box {
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
-  justify-content: center;
+.abilities-box__item,
+.surfcoaching-box__item {
+  width: 278px;
+}
+@supports (display: grid) {
+  .surfcoaching-box,
+  .abilities-box {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    justify-content: center;
+    &__item {
+      width: initial;
+    }
+  }
 }
 
 .map-holder {

@@ -94,10 +94,20 @@
   grid-template-columns: repeat(4, minmax(210px, 1fr));
   justify-content: center;
   &__item {
+    width: 220px;
+    margin-right: 20px;
+
     position: relative;
     &:hover {
       cursor: pointer;
     }
+  }
+}
+@supports (display: grid) {
+  .abilities-box__item,
+  .surfcoaching-box__item {
+    margin-right: 0;
+    width: initial;
   }
 }
 .abilities-box__item:hover .abilities-box__image {

@@ -15,7 +15,6 @@
 // ======= event-box=======
 .event-box {
   display: grid;
-  display: -ms-grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
@@ -24,33 +23,44 @@
     "cont3 img3"
     "img4 cont4";
   &__item {
+    @include flexRow;
     display: contents;
   }
   &__content {
     &_1 {
+      order: -1;
+      flex-basis: 50%;
       grid-area: cont1;
     }
     &_second {
+      flex: 50%;
       grid-area: cont2;
     }
     &_third {
+      order: -1;
+      flex-basis: 50%;
       grid-area: cont3;
     }
     &_4 {
+      flex: 50%;
       grid-area: cont4;
     }
   }
   &__image {
     &_1 {
+      flex: 50%;
       grid-area: img1;
     }
     &_2 {
+      flex: 50%;
       grid-area: img2;
     }
     &_3 {
+      flex: 50%;
       grid-area: img3;
     }
     &_4 {
+      flex: 50%;
       grid-area: img4;
     }
   }

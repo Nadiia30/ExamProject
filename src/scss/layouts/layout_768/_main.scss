@@ -115,9 +115,27 @@
 
 .surfcoaching-box,
 .abilities-box {
-  display: grid;
-  grid-gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.abilities-box__item,
+.surfcoaching-box__item {
+  width: 300px;
+  margin-right: 50px;
+}
+
+@supports (display: grid) {
+  .surfcoaching-box,
+  .abilities-box {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    &__item {
+      margin-right: 0;
+      width: initial;
+    }
+  }
 }
 
 // ====== testimonials ========
